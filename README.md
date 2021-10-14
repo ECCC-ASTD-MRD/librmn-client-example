@@ -1,5 +1,5 @@
-This project is a very simple example that shows how to use **librmn** in a client
-application with [CMake](https://cmake.org).
+This project is a very simple example that shows how to use [librmn](../librmn)
+in a client application with [CMake](https://cmake.org).
 
 It contains examples for [C](hello.c) and [Fortran](hello.F90).
 
