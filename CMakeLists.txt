@@ -1,9 +1,13 @@
 cmake_minimum_required(VERSION 3.16)
 
-enable_language(C Fortran)
-project(librmn-client-example DESCRIPTION "An extremely simple example that shows how to use librmn in a client application")
-
 list(APPEND CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake_rpn)
+include(ec_init)
+ec_git_version()
+
+project(librmn-client-example DESCRIPTION "An extremely simple example that shows how to use librmn in a client application")
+set(PROJECT_VERSION ${GIT_VERSION})
+
+enable_language(C Fortran)
 
 set(CMAKE_VERBOSE_MAKEFILE TRUE)
 
@@ -16,8 +20,8 @@ set(CMAKE_VERBOSE_MAKEFILE TRUE)
 set(RMN_LINK_TYPE SHARED)
 find_package(rmn 20.0.0 REQUIRED)
 
-add_executable(fhello hello.F90)
-target_link_libraries(fhello rmn)
+add_executable(fexample example.F90)
+target_link_libraries(fexample rmn)
 
-add_executable(chello hello.c)
-target_link_libraries(chello rmn)
+add_executable(cexample example.c)
+target_link_libraries(cexample rmn)
