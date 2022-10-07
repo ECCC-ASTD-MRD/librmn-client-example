@@ -24,9 +24,9 @@ application.
 ## Building
 
 1. Create a folder where to build the project
-   `mkdir /tmp/librmn-client-example`
+   `mkdir /tmp/${USER}/librmn-client-example`
 2. Go inside the newly created folder
-   `cd /tmp/librmn-client-example`
+   `cd /tmp/${USER}/librmn-client-example`
 3. Launch CMake on the path where this repository was cloned
    `cmake <librmn-client-example clone path>`
 4. Launch make

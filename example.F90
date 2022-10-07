@@ -3,7 +3,7 @@ module librmn
     implicit none
 
     interface
-        subroutine print_librmn_version() bind(C, name = 'print_librmn_version')
+        subroutine print_librmn_version() bind(C, name = 'print_rmn_version')
         end subroutine print_librmn_version
     end interface
 end module

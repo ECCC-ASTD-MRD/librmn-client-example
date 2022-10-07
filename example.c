@@ -2,8 +2,7 @@
 #include <stdint.h>
 #include <stdlib.h>
 
-#include <librmn.h>
-#include <fnom.h>
+#include <rmn.h>
 
 void printUsage(char **argv) {
     printf("librmn client example program that lists the fields in a file and the grid coordinates\n\n");
@@ -13,7 +12,7 @@ void printUsage(char **argv) {
 
 
 int main(int argc, char **argv) {
-    print_librmn_version();
+    print_rmn_version();
 
     if (argc != 2) {
         printUsage(argv);
