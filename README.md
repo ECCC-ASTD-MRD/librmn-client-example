@@ -21,6 +21,8 @@ CMake command does.
       or as an environment variable.  In both cases, it must contain the path
       to the installation root of the library under which **lib** and
       **include** can be found.
+- If not building on ECCC's systems, git submodules must be retrieved:
+  `git submodule init` followed with `git submodule update --recursive`
 
 
 ## Building
