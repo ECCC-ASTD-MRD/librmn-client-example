@@ -1,7 +1,7 @@
 This project is a very simple example that shows how to use **librmn**
 in a client application with [CMake](https://cmake.org).
 
-It contains examples for [C](hello.c) and [Fortran](hello.F90).
+It contains examples for [C](example.c) and [Fortran](example.F90).
 
 [CMakeLists.txt](CMakeLists.txt) shows how to link the library with your
 application. This file is loaded with comments to explain what each
