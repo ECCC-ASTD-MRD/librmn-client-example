@@ -4,21 +4,23 @@ in a client application with [CMake](https://cmake.org).
 It contains examples for [C](hello.c) and [Fortran](hello.F90).
 
 [CMakeLists.txt](CMakeLists.txt) shows how to link the library with your
-application.
+application. This file is loaded with comments to explain what each
+CMake command does.
 
 
 ## Requirements
 
-- This only works with the devlopment branch of librmn (20.0.0)
+- This only works with the development branch of librmn (20.0.0)
 - The library must be accessible through one of the following means:
-    - **LD_LIBRARY_PATH** and **CPATH** must contain the paths to the library
-      and headers respectively (done when loading with r.load.dot/ssm)
+    - **LD_LIBRARY_PATH**, **LIBRARY_PATH** and **CPATH** must contain
+      the paths to the library and headers
     - **EC_LD_LIBRARY_PATH** and **EC_INCLUDE_PATH** must contain the paths
-      to the library and headers respectively (done when loading with r.load.dot/ssm)
-    - **rmn_ROOT** can be specified in the CMake commande line (-Drmn_ROOT=...)
+      to the library and headers respectively (done when loading with
+      `r.load.dot`/`ssm`)
+    - **rmn_ROOT** can be specified in the CMake command line (`-Drmn_ROOT=...`)
       or as an environment variable.  In both cases, it must contain the path
       to the installation root of the library under which **lib** and
-      **include** must be found.
+      **include** can be found.
 
 
 ## Building
