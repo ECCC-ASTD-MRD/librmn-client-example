@@ -50,27 +50,27 @@ int main(int argc, char **argv) {
     printf("There are %d records in %s\n", recordNb, filePath);
 
     // Dimension along X
-    uint32_t ni;
+    int ni;
     // Dimension along Y
-    uint32_t nj;
+    int nj;
     // Dimension along Z
-    uint32_t nk;
+    int nk;
     // Forecast origin date
-    uint32_t dateo;
+    int dateo;
     // Forecast timestep in seconds
-    uint32_t deet;
+    int deet;
     // Number of forecast steps
-    uint32_t npas;
+    int npas;
     // Number of bits per field element
-    uint32_t nbits;
+    int nbits;
     // Data type
-    uint32_t datyp;
+    int datyp;
     // Vertical level
-    uint32_t ip1;
+    int ip1;
     // Second field identifier.  Usually the forecast hour
-    uint32_t ip2;
+    int ip2;
     // Third field identifier.  User defined
-    uint32_t ip3;
+    int ip3;
     // Variable type
     char typvar[3] = {' ', ' ', '\0'};
     // Variable name
@@ -80,23 +80,23 @@ int main(int argc, char **argv) {
     // Grid type (geographical projection)
     char grtyp[2] = {' ', '\0'};
     // First grid descriptor
-    uint32_t ig1;
+    int ig1;
     // Second grid descriptor
-    uint32_t ig2;
+    int ig2;
     // Third grid descriptor
-    uint32_t ig3;
+    int ig3;
     // Fourth grid descriptor
-    uint32_t ig4;
+    int ig4;
     // ???
-    uint32_t swa;
+    int swa;
     // Header length (in 64 bits units)
-    uint32_t lng;
+    int lng;
     // ???
-    uint32_t dltf;
+    int dltf;
     // ???
-    uint32_t ubc;
+    int ubc;
     // ???
-    uint32_t extra1, extra2, extra3;
+    int extra1, extra2, extra3;
 
     float lat = 0;
     float lon = 0;
@@ -109,7 +109,7 @@ int main(int argc, char **argv) {
     do {
         printf("\tkey=%d\n", key);
 
-        c_fstprm (key, &dateo, &deet, &npas, &ni, &nj, &nk, &nbits, &datyp, &ip1, &ip2, &ip3, typvar, nomvar, etiket, grtyp, &ig1, &ig2, &ig3, &ig4, &swa, &lng, &dltf, &ubc, &extra1, &extra2, &extra3);
+        c_fstprm(key, &dateo, &deet, &npas, &ni, &nj, &nk, &nbits, &datyp, &ip1, &ip2, &ip3, typvar, nomvar, etiket, grtyp, &ig1, &ig2, &ig3, &ig4, &swa, &lng, &dltf, &ubc, &extra1, &extra2, &extra3);
 
         printf("%s\t%s\t%s\t%d\t%d\t%d\t%d\t%d\t%d\t%s\t%d\t%d\t%d\t%d\n", nomvar, typvar, grtyp, ni, nj, nk, ip1, ip2, ip3, etiket, ig1, ig2, ig3, ig4);
 
