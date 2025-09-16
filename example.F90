@@ -3,8 +3,8 @@ module librmn
     implicit none
 
     interface
-        subroutine print_librmn_version() bind(C, name = 'print_rmn_version')
-        end subroutine print_librmn_version
+        subroutine print_build_info() bind(C, name = 'rmn_print_build_info')
+        end subroutine
     end interface
 end module
 
@@ -13,5 +13,5 @@ program hello
     use librmn
     implicit none
 
-    call print_librmn_version()
-end program hello
+    call print_build_info()
+end program

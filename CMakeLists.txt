@@ -43,7 +43,7 @@ set(CMAKE_VERBOSE_MAKEFILE TRUE)
 if (NOT rmn_FOUND)
     # The "COMPONENTS shared" part is optional, but can be added to link to
     # the shared library instead of linking statically
-    find_package(rmn 20.0.0 REQUIRED COMPONENTS shared)
+    find_package(rmn 20.1.0 REQUIRED)
 endif()
 
 # Tell CMake to produce an executable from Fortran source code.
@@ -51,8 +51,14 @@ endif()
 add_executable(fexample example.F90)
 # This informs CMake that the executable must be linked with librmn.
 # CMake will automatically add all the needed compile flags and link options.
-target_link_libraries(fexample rmn)
+target_link_libraries(fexample rmn::rmn)
 
 # Same thing as the Fortran example, but for a C program.
 add_executable(cexample example.c)
-target_link_libraries(cexample rmn)
+target_link_libraries(cexample rmn::rmn)
+
+# Here is an example with MPI
+add_executable(is_same_host is_same_host.F90)
+# It isn't necessary to add to linked to MPI since rmn already has
+# the dependency documented at the CMake level
+target_link_libraries(is_same_host PRIVATE rmn::rmn-ompi)

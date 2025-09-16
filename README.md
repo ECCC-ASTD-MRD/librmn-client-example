@@ -10,7 +10,7 @@ CMake command does.
 
 ## Requirements
 
-- This only works with the development branch of librmn (20.0.0)
+- This only works with the development branch of librmn (20.1.0)
 - The library must be accessible through one of the following means:
     - **LD_LIBRARY_PATH**, **LIBRARY_PATH** and **CPATH** must contain
       the paths to the library and headers
